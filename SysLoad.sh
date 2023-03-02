@@ -25,6 +25,6 @@ then
         logger -p local3.crit "system load is ${SYSLOAD} at $(date)"
 
         # Recording the event to /tmp/events file
-        echo -e "Subject: Server ${IP} load \n Body: \n \t Dear, \n \t \t The system ${HOSTNAME} runs with IP ${IP} has a load of \n \t \t 1MIN load: ${M1} \n \t \t 5MIN load: ${M2} \n \t \t 15MIN load: ${M3} \n \t Thank you ." > /tmp/events
+        echo -e "Subject: Server ${IP} load \nBody: \n \t Dear, \n \t \t The system ${HOSTNAME} runs with IP ${IP} has a load of \n \t \t 1MIN load: ${M1} \n \t \t 5MIN load:${M2} \n \t \t 15MIN load:${M3} \n \t Thank you ." >> /tmp/events
 fi
 exit 0
