@@ -22,7 +22,7 @@ CH2=$(echo "${M2}>${M3}" | bc)
 if [ ${CH1} -eq 1 ] || [ ${CH2} -eq 1 ]
 then
         # Recording a log with load and date in case of high load
-        logger -p local3.info "system load is ${SYSLOAD} at $(date)"
+        logger -p local3.crit "system load is ${SYSLOAD} at $(date)"
 
         # Recording the event to /tmp/events file
         echo -e "Subject: Server ${IP} load \n Body: \n \t Dear, \n \t \t The system ${HOSTNAME} runs with IP ${IP} has a load of \n \t \t 1MIN load: ${M1} \n \t \t 5MIN load: ${M2} \n \t \t 15MIN load: ${M3} \n \t Thank you ." > /tmp/events
